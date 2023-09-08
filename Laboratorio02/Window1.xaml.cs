@@ -40,7 +40,8 @@ namespace Laboratorio02
         }
         private void btn_Conductores(object sender, RoutedEventArgs e)
         {
-
+            Window4 window = new Window4();
+            window.Show();
         }
         private void btn_Transportistas(object sender, RoutedEventArgs e)
         {
