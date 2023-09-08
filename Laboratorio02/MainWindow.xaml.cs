@@ -15,14 +15,48 @@ using System.Windows.Shapes;
 
 namespace Laboratorio02
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void btnIniciarSesion_Click(object sender, RoutedEventArgs e)
+        {
+            //Window1 window = new Window1();
+            //this.Close();
+            //window.Show();
+
+            string nombreUsuario = txtUsuario.Text;
+            string contraseña = txtContraseña.Password;
+
+  
+            if (AutenticarUsuario(nombreUsuario, contraseña))
+            { 
+                MessageBox.Show("Inicio de sesión exitoso");
+                Window1 window = new Window1();
+                this.Close();
+                window.Show();
+            }
+            else
+            { 
+                MessageBox.Show("Nombre de usuario o contraseña incorrectos");
+            }
+        }
+
+        private void txtBorrar_texto(object sender, RoutedEventArgs e)
+        {
+            TextBox textBox = sender as TextBox;
+            if (textBox != null && textBox.Text == "Usuario")
+            {
+                textBox.Text = string.Empty;
+            }
+        }
+
+        private bool AutenticarUsuario(string nombreUsuario, string contraseña)
+        {
+            return nombreUsuario == "gian" && contraseña == "123456";
         }
     }
 }

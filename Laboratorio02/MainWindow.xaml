@@ -5,9 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Laboratorio02"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="264,151,0,0" VerticalAlignment="Top"/>
+        Title="Login" Height="200" Width="400">
+    <Grid Background="#87CEEB">
+        <TextBox Name="txtUsuario" Foreground="Gray" GotFocus="txtBorrar_texto" HorizontalAlignment="Center" FontWeight="Bold" Margin="0,59,0,0" TextWrapping="Wrap" Text="Usuario" VerticalAlignment="Top" Width="120"/>
+        <PasswordBox Name="txtContraseña" HorizontalAlignment="Center" Margin="0,99,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Iniciar sesión" Background="Azure" FontWeight="Bold" Name="btnIniciarSesion" HorizontalAlignment="Center" Margin="0,130,0,0" VerticalAlignment="Top" Click="btnIniciarSesion_Click"/>
+        <Label Content="LABORATORIO 02" FontSize="24" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
